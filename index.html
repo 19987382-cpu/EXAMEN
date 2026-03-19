@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Misiones - daniel vladimir</title>
+    <link rel="stylesheet" href="danil.css">
+</head>
+<body>
+
+    <div class="layout-principal">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <img src="logo.JPG" alt="Logo Cohete" class="logo-img-grande">
+                <div class="logo-texto">DúoDev</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">🚀 Inicio</a></li>
+                <li><a href="#poderes">⚡ Poderes</a></li>
+                <li><a href="#contacto">📞 Contacto</a></li>
+            </ul>
+        </aside>
+
+        <div class="contenido-derecho" id="contenido">
+            
+            <div class="barra-superior">
+                <button id="btn-menu" class="btn-menu">☰</button>
+            </div>
+
+            <main>
+                <section id="inicio" class="mission-control">
+                    <h1>operacion de ayudad para pc</h1>
+                    
+                    <div class="bento-grid">
+                        <article class="card hero-card">
+                            <div class="hero-info">
+                                <h2>daniel vladimir mendez marcoz</h2>
+                                <p>Especialistas tácticos en desarrollo front-end. Combinamos nuestras habilidades para infiltrarnos en cualquier servidor y maquetar sin miedo al éxito.</p>
+                            </div>
+                        </article>
+
+                        <article class="card motto-card">
+                            <h3>Nuestro Lema</h3>
+                            <blockquote>"Dos mentes piensan mejor que una... y compilan el código a la primera."</blockquote>
+                        </article>
+
+                        <article class="card skill-card" id="poderes">
+                            <h3>Sinergia de Tipeo</h3>
+                            <p>Más de 200 palabras por minuto combinando nuestros teclados en modo combate.</p>
+                        </article>
+
+                        <article class="card skill-card">
+                            <h3>Magia en CSS</h3>
+                            <p>Dominio absoluto de Flexbox y Grid. Centramos un div con los ojos cerrados.</p>
+                        </article>
+
+                        <article class="card stats-card">
+                            <h3>Nivel de Experiencia del Dúo</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;">95% - Rango Leyenda</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="contacto">
+                <div class="footer-links">
+                    <a href="https://us.123rf.com/450wm/jemastock/jemastock1911/jemastock191125677/133787807-hombre-joven-cara-sonriente-dibujos-animados-vector-ilustraci%C3%B3n-dise%C3%B1o-gr%C3%A1fico.jpg?ver=6">📧 Mándanos una Misión</a>
+                    <a href="#">🐦 Twitter (X)</a>
+                    <a href="#">💼 LinkedIn</a>
+                    <a href="#">🐙 GitHub</a>
+                </div>
+                <p>&copy; 2026 Central de Misiones - Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const sidebar = document.getElementById('sidebar');
+        const contenido = document.getElementById('contenido');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        // Abrir/Cerrar menú
+        btnMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('toggle-activo');
+            contenido.classList.toggle('toggle-activo');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (ideal para móviles)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('toggle-activo');
+                contenido.classList.remove('toggle-activo');
+            });
+        });
+    </script>
+</body>
+</html>
